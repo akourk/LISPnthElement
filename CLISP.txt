@@ -1,0 +1,11 @@
+this works:
+(defun kthelement(list n) (if (= n 1) (car list) (kthelement (cdr list) (- n 1))))
+
+this is easier:
+(defun kthelement(list n) (car (nthcdr (- n 1) list)))
+
+
+ex.
+(setq x '(a b c d e f g h i j k l m n))
+(kthelement x 5)
+E
